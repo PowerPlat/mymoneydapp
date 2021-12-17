@@ -9,6 +9,7 @@ pub mod mymoneydapp {
     use super::*;
 
     pub fn proxy_transfer(ctx: Context<ProxyTransfer>, amount: u64) -> ProgramResult {
+        msg!("Logging is functional! Starting the proxy_transfer function.");
         token::transfer(ctx.accounts.into(), amount)
     }
     
