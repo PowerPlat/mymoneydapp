@@ -7,9 +7,6 @@ declare_id!("BnpMpMkMx2NJ374B5BgApbM8bg825k3wV1GKoj4JpDQX");
 #[program]
 pub mod mymoneydapp {
     use super::*;
-    pub fn initialize(ctx: Context<Initialize>) -> ProgramResult {
-        Ok(())
-    }
 
     pub fn proxy_transfer(ctx: Context<ProxyTransfer>, amount: u64) -> ProgramResult {
         token::transfer(ctx.accounts.into(), amount)
@@ -157,7 +154,3 @@ impl From<AuthorityType> for spl_token::instruction::AuthorityType {
         }
     }
 }
-
-
-#[derive(Accounts)]
-pub struct Initialize {}

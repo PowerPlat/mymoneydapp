@@ -2,7 +2,8 @@ const anchor = require("@project-serum/anchor");
 const assert = require("assert");
 
 describe('mymoneydapp', () => {
-  const provider = anchor.Provider.local();
+  // const provider = anchor.Provider.local();
+  const provider = anchor.Provider.env();
   anchor.setProvider(provider);
   const program = anchor.workspace.Mymoneydapp;
 
